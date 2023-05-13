@@ -49,6 +49,8 @@ DNS_RESOLVER () {
 	make
 	make install
 	
+	su nishant57
+
 	go install github.com/lc/subjs@latest
 	sudo cp $HOME/go/bin/subjs /usr/local/bin
 
@@ -57,7 +59,7 @@ DNS_RESOLVER () {
 
 	go install github.com/hakluke/haklistgen@latest
 	sudo cp $HOME/go/bin/haklistgen /usr/local/bin
-	pip3 install dnsgen
+	sudo pip3 install dnsgen
 	
 	go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 	sudo cp $HOME/go/bin/nuclei /usr/local/bin
@@ -113,8 +115,8 @@ DNS_RESOLVER () {
 	cd $HOME/BB
 	git clone https://github.com/vortexau/dnsvalidator.git
 	cd dnsvalidator
-	pip install -r requirements.txt
-	python3 setup.py install
+	sudo pip install -r requirements.txt
+	sudo python3 setup.py install
 	
 	cd $HOME
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -126,7 +128,7 @@ DNS_RESOLVER () {
 	git clone https://github.com/findomain/findomain.git
 	cd findomain
 	cargo build --release
-	sudo sudo cp target/release/findomain /usr/bin/
+	sudo cp target/release/findomain /usr/bin/
 	
 	cd $HOME/BB
 	git clone https://github.com/Josue87/AnalyticsRelationships.git
@@ -136,7 +138,7 @@ DNS_RESOLVER () {
 	cd $HOME/BB
 	git clone https://github.com/SpiderLabs/HostHunter.git
 	cd HostHunter
-	pip3 install -r requirements.txt
+	sudo pip3 install -r requirements.txt
 
 	cd $HOME
 	cargo install ripgen
@@ -145,19 +147,19 @@ DNS_RESOLVER () {
 	
 	git clone https://github.com/shmilylty/OneForAll.git
 	cd OneForAll/
-	python3 -m pip install -U pip setuptools wheel
-	pip3 install -r requirements.txt
+	sudo python3 -m pip install -U pip setuptools wheel
+	sudo pip3 install -r requirements.txt
 	
 	cd $HOME/BB
 	git clone https://github.com/dariusztytko/vhosts-sieve.git
-	pip3 install -r vhosts-sieve/requirements.txt
+	sudo pip3 install -r vhosts-sieve/requirements.txt
 	
 	cd $HOME/BB
 	git clone https://github.com/punk-security/dnsReaper.git
 	cd dnsReaper
-	pip install -r requirements.txt
+	sudo pip install -r requirements.txt
 	
-	pip install gdown
+	sudo pip install gdown
 }
 
 ENVIRONMENT && DNS_RESOLVER;
