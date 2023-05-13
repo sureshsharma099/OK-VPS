@@ -7,13 +7,13 @@ clear;
 ENVIRONMENT () {
 	echo -e ${BLUE}"[ENVIRONMENT]" ${RED}"Packages required installation in progress ...";
 	
-        apt-get update -y > /dev/null 2>&1;
+    	apt-get update -y > /dev/null 2>&1;
 	sudo apt install wget > /dev/null 2>&1;
 	apt-get install golang -y > /dev/null 2>&1;
-        apt-get install python > /dev/null 2>&1;
-        apt-get install python2 > /dev/null 2>&1;
-        apt-get install python3 -y > /dev/null 2>&1;
-        apt-get install pip -y > /dev/null 2>&1;
+	apt-get install python > /dev/null 2>&1;
+	apt-get install python2 > /dev/null 2>&1;
+	apt-get install python3 -y > /dev/null 2>&1;
+	apt-get install pip -y > /dev/null 2>&1;
 	apt-get install unzip > /dev/null 2>&1;
 	apt install curl -y > /dev/null 2>&1;
 	pip3 install colored  > /dev/null 2>&1;
@@ -49,67 +49,66 @@ DNS_RESOLVER () {
 	make
 	make install
 	
-	su nishant57
 	go install github.com/lc/subjs@latest
-	cp $HOME/go/bin/subjs /usr/local/bin
+	sudo cp $HOME/go/bin/subjs /usr/local/bin
 
 	go install github.com/lc/gau/v2/cmd/gau@latest
-	cp $HOME/go/bin/gau /usr/local/bin
+	sudo cp $HOME/go/bin/gau /usr/local/bin
 
 	go install github.com/hakluke/haklistgen@latest
-	cp $HOME/go/bin/haklistgen /usr/local/bin
+	sudo cp $HOME/go/bin/haklistgen /usr/local/bin
 	pip3 install dnsgen
 	
 	go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-	cp $HOME/go/bin/nuclei /usr/local/bin
+	sudo cp $HOME/go/bin/nuclei /usr/local/bin
 	
 	go install github.com/tomnomnom/hacks/tok@master
-	cp $HOME/go/bin/tok /usr/local/bin
+	sudo cp $HOME/go/bin/tok /usr/local/bin
 	
 	go install github.com/tomnomnom/assetfinder@latest
-	cp $HOME/go/bin/assetfinder /usr/local/bin
+	sudo cp $HOME/go/bin/assetfinder /usr/local/bin
 	
 	go install github.com/tomnomnom/httprobe@master
-	cp $HOME/go/bin/httprobe /usr/bin/
+	sudo cp $HOME/go/bin/httprobe /usr/bin/
 	
 	go install github.com/haccer/subjack@latest
-	cp $HOME/go/bin/subjack /usr/bin/
+	sudo cp $HOME/go/bin/subjack /usr/bin/
 	
 	go install github.com/sensepost/gowitness@latest
-	cp $HOME/go/bin/gowitness /usr/local/bin
+	sudo cp $HOME/go/bin/gowitness /usr/local/bin
 	
 	go install github.com/hakluke/hakrawler@latest
-	cp $HOME/go/bin/hakrawler /usr/local/bin
+	sudo cp $HOME/go/bin/hakrawler /usr/local/bin
 
 	go install github.com/Josue87/gotator@latest
-	cp $HOME/go/bin/gotator /usr/local/bin
+	sudo cp $HOME/go/bin/gotator /usr/local/bin
 	
 	go install -v github.com/tomnomnom/anew@latest
-	cp $HOME/go/bin/anew /usr/local/bin
+	sudo cp $HOME/go/bin/anew /usr/local/bin
 	
 	go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-	cp $HOME/go/bin/httpx /usr/local/bin
+	sudo cp $HOME/go/bin/httpx /usr/local/bin
 
 	go install github.com/jaeles-project/gospider@latest
-	cp $HOME/go/bin/gospider /usr/local/bin
+	sudo cp $HOME/go/bin/gospider /usr/local/bin
 
 	go install github.com/tomnomnom/unfurl@latest
-	cp $HOME/go/bin/unfurl /usr/local/bin
+	sudo cp $HOME/go/bin/unfurl /usr/local/bin
 	
 	go install github.com/OJ/gobuster/v3@latest
-	cp $HOME/go/bin/gobuster /usr/local/bin
+	sudo cp $HOME/go/bin/gobuster /usr/local/bin
 
 	go install github.com/ffuf/ffuf/v2@latest
-	cp $HOME/go/bin/ffuf /usr/local/bin
+	sudo cp $HOME/go/bin/ffuf /usr/local/bin
 
 	go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-	cp $HOME/go/bin/subfinder /usr/local/bin
+	sudo cp $HOME/go/bin/subfinder /usr/local/bin
 	
 	go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
-	cp $HOME/go/bin/naabu /usr/local/bin
+	sudo cp $HOME/go/bin/naabu /usr/local/bin
 	
 	go install -v github.com/projectdiscovery/wappalyzergo/cmd/update-fingerprints@latest
-	cp $HOME/go/bin/wappalyzergo /usr/local/bin
+	sudo cp $HOME/go/bin/wappalyzergo /usr/local/bin
 	
 	cd $HOME/BB
 	git clone https://github.com/vortexau/dnsvalidator.git
@@ -127,7 +126,7 @@ DNS_RESOLVER () {
 	git clone https://github.com/findomain/findomain.git
 	cd findomain
 	cargo build --release
-	sudo cp target/release/findomain /usr/bin/
+	sudo sudo cp target/release/findomain /usr/bin/
 	
 	cd $HOME/BB
 	git clone https://github.com/Josue87/AnalyticsRelationships.git
