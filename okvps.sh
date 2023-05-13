@@ -32,7 +32,6 @@ ENVIRONMENT () {
 	sudo apt install wkhtmltopdf
 	apt install -y libpcap-dev
 	pip install gdown
-	sudo ln -s ~/.local/bin/gdown /usr/bin/gdown
 }
 
 DNS_RESOLVER () {
