@@ -36,6 +36,7 @@ ENVIRONMENT () {
 DNS_RESOLVER () {
 	#MassDNS
 	echo -e ${BLUE}"[DNS RESOLVER]" ${RED}"MassDNS installation in progress ...";
+	sudo su
 	cd /root/OK-VPS/tools && git clone https://github.com/blechschmidt/massdns.git > /dev/null 2>&1 && cd massdns && make && make install > /dev/null 2>&1 && ln -s /root/OK-VPS/tools/massdns/bin/massdns /usr/local/bin/;
 	echo -e ${BLUE}"[DNS RESOLVER]" ${GREEN}"MassDNS installation is done !"; echo "";
 	#PureDNS
@@ -48,6 +49,7 @@ DNS_RESOLVER () {
 	make
 	make install
 	
+	su nishant57
 	go install github.com/lc/subjs@latest
 	cp $HOME/go/bin/subjs /usr/local/bin
 
