@@ -24,7 +24,6 @@ ENVIRONMENT () {
 	apt install snapd -y > /dev/null 2>&1;
 	apt install python3-pip -y > /dev/null 2>&1;
 	sudo apt install snapd
-	sudo snap install amass
 	sudo apt-get install parallel
 	sudo rm /etc/parallel/config
 	sudo apt-get --assume-yes install git make gcc
@@ -51,6 +50,9 @@ DNS_RESOLVER () {
 	
 	su nishant57
 
+	go install -v github.com/owasp-amass/amass/v3/...@master
+	sudo cp $HOME/go/bin/amass /usr/local/bin
+	
 	go install github.com/lc/subjs@latest
 	sudo cp $HOME/go/bin/subjs /usr/local/bin
 
