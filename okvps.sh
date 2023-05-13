@@ -30,6 +30,7 @@ ENVIRONMENT () {
 	sudo apt-get install -y grepcidr
 	sudo apt install wkhtmltopdf
 	sudo apt install -y libpcap-dev
+	sudo apt-get install python3-venv -y
 }
 
 DNS_RESOLVER () {
