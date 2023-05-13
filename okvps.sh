@@ -161,6 +161,12 @@ DNS_RESOLVER () {
 	cd dnsReaper
 	sudo pip install -r requirements.txt
 	
+	cd $HOME/BB
+	git clone https://github.com/0xlittleboy/SubDomz.git
+	cd SubDomz 
+	chmod +x install.sh SubDomz
+	./install.sh
+	
 	sudo pip install gdown
 }
 
