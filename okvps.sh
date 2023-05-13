@@ -30,8 +30,7 @@ ENVIRONMENT () {
 	sudo apt-get --assume-yes install git make gcc
 	sudo apt-get install -y grepcidr
 	sudo apt install wkhtmltopdf
-	apt install -y libpcap-dev
-	pip install gdown
+	sudo apt install -y libpcap-dev
 }
 
 DNS_RESOLVER () {
@@ -156,6 +155,8 @@ DNS_RESOLVER () {
 	git clone https://github.com/punk-security/dnsReaper.git
 	cd dnsReaper
 	pip install -r requirements.txt
+	
+	pip install gdown
 }
 
 ENVIRONMENT && DNS_RESOLVER;
