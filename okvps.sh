@@ -162,7 +162,7 @@ DNS_RESOLVER () {
 	sudo pip install -r requirements.txt
 	
 	cd $HOME/BB
-	git clone https://github.com/0xlittleboy/SubDomz.git
+	git clone https://github.com/Nishantbhagat57/SubDomz.git
 	cd SubDomz 
 	chmod +x install.sh SubDomz
 	./install.sh
