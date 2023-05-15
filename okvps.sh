@@ -171,6 +171,11 @@ DNS_RESOLVER () {
 	chmod +x install.sh SubDomz
 	./install.sh
 	
+	cd $HOME/BB
+	git clone https://github.com/laramies/theHarvester
+	cd theHarvester
+	sudo python3 -m pip install -r requirements/base.txt
+	
 	sudo pip install gdown
 }
 
