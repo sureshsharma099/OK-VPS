@@ -115,6 +115,9 @@ DNS_RESOLVER () {
 	go install -v github.com/projectdiscovery/wappalyzergo/cmd/update-fingerprints@latest
 	sudo cp $HOME/go/bin/wappalyzergo /usr/local/bin
 	
+	go install github.com/projectdiscovery/alterx/cmd/alterx@latest
+	sudo cp $HOME/go/bin/alterx /usr/local/bin
+	
 	cd $HOME/BB
 	git clone https://github.com/vortexau/dnsvalidator.git
 	cd dnsvalidator
