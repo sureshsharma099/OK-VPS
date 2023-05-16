@@ -118,6 +118,9 @@ DNS_RESOLVER () {
 	go install github.com/projectdiscovery/alterx/cmd/alterx@latest
 	sudo cp $HOME/go/bin/alterx /usr/local/bin
 	
+	go install github.com/trickest/mksub@latest
+	sudo cp $HOME/go/bin/mksub /usr/local/bin
+	
 	cd $HOME/BB
 	git clone https://github.com/vortexau/dnsvalidator.git
 	cd dnsvalidator
