@@ -180,6 +180,7 @@ DNS_RESOLVER () {
 	sudo python3 -m pip install -r requirements/base.txt
 	
 	sudo pip install gdown
+	sudo pip install wafw00f
 }
 
 ENVIRONMENT && DNS_RESOLVER;
