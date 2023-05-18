@@ -44,10 +44,12 @@ DNS_RESOLVER () {
 	GO111MODULE=on go install github.com/d3mondev/puredns/v2@latest > /dev/null 2>&1 && ln -s ~/go/bin/puredns /usr/local/bin;
 	echo -e ${BLUE}"[DNS RESOLVER]" ${GREEN}"PureDNS installation is done !"; echo "";
 	
+	cd $HOME/BB
+	sudo apt-get --assume-yes install git make gcc
 	git clone https://github.com/robertdavidgraham/masscan
 	cd masscan
-	make
-	make install
+	sudo make
+	sudo make install
 	
 	su nishant57
 
