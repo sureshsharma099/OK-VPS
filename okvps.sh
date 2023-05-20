@@ -186,6 +186,8 @@ DNS_RESOLVER () {
 	cd xnLinkFinder
 	sudo python3 setup.py install
 	
+	sudo wget https://raw.githubusercontent.com/Azathothas/BugGPT-Tools/main/linky/linky.sh -O /usr/local/bin/linky && sudo chmod +xwr /usr/local/bin/linky && linky --help
+	
 	cd $HOME
 	sudo pip install gdown
 	sudo pip install wafw00f
