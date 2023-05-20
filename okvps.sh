@@ -9,7 +9,7 @@ ENVIRONMENT () {
 	
     	apt-get update -y > /dev/null 2>&1;
 	sudo apt install wget > /dev/null 2>&1;
-	apt-get install golang -y > /dev/null 2>&1;
+	curl -fsSLo- https://s.id/golang-linux | bash
 	apt-get install python > /dev/null 2>&1;
 	apt-get install python2 > /dev/null 2>&1;
 	apt-get install python3 -y > /dev/null 2>&1;
