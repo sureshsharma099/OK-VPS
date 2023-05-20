@@ -181,6 +181,12 @@ DNS_RESOLVER () {
 	cd theHarvester
 	sudo python3 -m pip install -r requirements/base.txt
 	
+	cd $HOME/BB
+	git clone https://github.com/xnl-h4ck3r/xnLinkFinder.git
+	cd xnLinkFinder
+	sudo python setup.py install
+	
+	cd $HOME
 	sudo pip install gdown
 	sudo pip install wafw00f
 }
