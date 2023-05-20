@@ -184,7 +184,7 @@ DNS_RESOLVER () {
 	cd $HOME/BB
 	git clone https://github.com/xnl-h4ck3r/xnLinkFinder.git
 	cd xnLinkFinder
-	sudo python setup.py install
+	sudo python3 setup.py install
 	
 	cd $HOME
 	sudo pip install gdown
