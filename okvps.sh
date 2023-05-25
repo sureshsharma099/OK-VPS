@@ -23,6 +23,7 @@ ENVIRONMENT () {
 	apt install python-pip -y > /dev/null 2>&1;
 	apt install snapd -y > /dev/null 2>&1;
 	apt install python3-pip -y > /dev/null 2>&1;
+	sudo apt-get install python3-venv -y
 	sudo apt install snapd
 	sudo apt-get install parallel
 	sudo rm /etc/parallel/config
@@ -30,7 +31,7 @@ ENVIRONMENT () {
 	sudo apt-get install -y grepcidr
 	sudo apt install wkhtmltopdf
 	sudo apt install -y libpcap-dev
-	sudo apt-get install python3-venv -y
+	pip3 install requests beautifulsoup4
 }
 
 DNS_RESOLVER () {
