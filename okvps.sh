@@ -194,6 +194,9 @@ DNS_RESOLVER () {
 	cd $HOME
 	sudo pip install gdown
 	sudo pip install wafw00f
+	
+	cd $HOME/BB
+	git clone https://github.com/Nishantbhagat57/OPleaks.git
 }
 
 ENVIRONMENT && DNS_RESOLVER;
