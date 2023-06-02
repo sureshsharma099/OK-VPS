@@ -32,6 +32,7 @@ ENVIRONMENT () {
 	sudo apt install wkhtmltopdf
 	sudo apt install -y libpcap-dev
 	pip3 install requests beautifulsoup4
+	pip3 install aiohttp aiofiles jsbeautifier
 }
 
 DNS_RESOLVER () {
@@ -123,6 +124,9 @@ DNS_RESOLVER () {
 	
 	go install github.com/trickest/mksub@latest
 	sudo cp $HOME/go/bin/mksub /usr/local/bin
+	
+	go install github.com/hakluke/hakcheckurl@latest
+	sudo cp $HOME/go/bin/hakcheckurl /usr/local/bin
 	
 	cd $HOME/BB
 	git clone https://github.com/vortexau/dnsvalidator.git
