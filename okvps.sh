@@ -201,6 +201,13 @@ DNS_RESOLVER () {
 	
 	cd $HOME/BB
 	git clone https://github.com/Nishantbhagat57/OPleaks.git
+	
+	cd $HOME/BB
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$USER/.bashrc
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	brew doctor
+	brew install gcc
 }
 
 ENVIRONMENT && DNS_RESOLVER;
