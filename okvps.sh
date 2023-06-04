@@ -31,6 +31,7 @@ ENVIRONMENT () {
 	sudo apt-get install -y grepcidr
 	sudo apt install wkhtmltopdf
 	sudo apt install -y libpcap-dev
+	sudo apt install zip
 	pip3 install requests beautifulsoup4
 	pip3 install aiohttp aiofiles jsbeautifier
 }
