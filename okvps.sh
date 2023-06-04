@@ -54,6 +54,12 @@ DNS_RESOLVER () {
 	sudo make
 	sudo make install
 	
+	cd $HOME/BB
+	git clone https://github.com/Nishantbhagat57/jsleaks.git
+	cd jsleaks
+	unzip assets.zip
+	
+	cd $HOME/BB
 	su nishant57
 
 	go install -v github.com/owasp-amass/amass/v3/...@master
