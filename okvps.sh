@@ -32,6 +32,7 @@ ENVIRONMENT () {
 	sudo apt install wkhtmltopdf
 	sudo apt install -y libpcap-dev
 	sudo apt install zip
+	sudo apt install -y dos2unix
 	pip3 install requests beautifulsoup4
 	pip3 install aiohttp aiofiles jsbeautifier
 }
