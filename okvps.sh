@@ -229,6 +229,9 @@ DNS_RESOLVER () {
 	wget https://github.com/Nishantbhagat57/My-Bug-Hunting-Repo/raw/main/CVE-2015-4050.yaml
 	
 	cd $HOME/BB
+	dos2unix *.sh
+	
+	cd $HOME/BB
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$USER/.bashrc
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
