@@ -139,7 +139,7 @@ DNS_RESOLVER () {
 	cd $HOME/BB
 	git clone https://github.com/vortexau/dnsvalidator.git
 	cd dnsvalidator
-	sudo pip install -r requirements.txt
+	sudo pip3 install -r requirements.txt
 	sudo python3 setup.py install
 	
 	cd $HOME
@@ -181,7 +181,7 @@ DNS_RESOLVER () {
 	cd $HOME/BB
 	git clone https://github.com/punk-security/dnsReaper.git
 	cd dnsReaper
-	sudo pip install -r requirements.txt
+	sudo pip3 install -r requirements.txt
 	
 	cd $HOME
 	git clone https://github.com/Nishantbhagat57/SubDomz.git
@@ -204,8 +204,8 @@ DNS_RESOLVER () {
 	sudo wget https://raw.githubusercontent.com/Azathothas/BugGPT-Tools/main/linky/linky.sh -O /usr/local/bin/linky && sudo chmod +xwr /usr/local/bin/linky && linky --help
 	
 	cd $HOME
-	sudo pip install gdown
-	sudo pip install wafw00f
+	sudo pip3 install gdown
+	sudo pip3 install wafw00f
 	
 	cd $HOME/BB
 	git clone https://github.com/Nishantbhagat57/OPleaks.git
