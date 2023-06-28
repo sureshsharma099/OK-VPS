@@ -237,6 +237,7 @@ DNS_RESOLVER () {
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	brew doctor
 	brew install gcc
+ 	brew install git
 }
 
 ENVIRONMENT && DNS_RESOLVER;
