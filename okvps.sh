@@ -35,6 +35,7 @@ ENVIRONMENT () {
 	sudo apt install -y dos2unix
 	pip3 install requests beautifulsoup4
 	pip3 install aiohttp aiofiles jsbeautifier
+ 	pip3 install weasyprint
 }
 
 DNS_RESOLVER () {
