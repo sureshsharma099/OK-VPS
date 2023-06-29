@@ -136,7 +136,13 @@ DNS_RESOLVER () {
 	
 	go install github.com/hakluke/hakcheckurl@latest
 	sudo cp $HOME/go/bin/hakcheckurl /usr/local/bin
-	
+
+ 	go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
+	sudo cp $HOME/go/bin/Web-Cache-Vulnerability-Scanner /usr/local/bin
+ 
+ 	cd $HOME/BB
+ 	git clone https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner.git
+  
 	cd $HOME/BB
 	git clone https://github.com/vortexau/dnsvalidator.git
 	cd dnsvalidator
