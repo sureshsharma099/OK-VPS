@@ -245,6 +245,13 @@ DNS_RESOLVER () {
 	brew doctor
 	brew install gcc
  	brew install git
+	brew install cmake
+ 
+   	cd $HOME/BB
+  	git clone https://github.com/ameenmaali/urldedupe.git
+   	cd urldedupe
+    	cmake CMakeLists.txt
+     	make 	
 }
 
 ENVIRONMENT && DNS_RESOLVER;
