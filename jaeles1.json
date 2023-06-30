@@ -1,0 +1,4 @@
+[{
+	"command":"cat input | /home/op/go/bin/jaeles scan -o output",
+	"ext":"dir"
+}]
