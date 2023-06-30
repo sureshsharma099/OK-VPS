@@ -251,7 +251,10 @@ DNS_RESOLVER () {
   	git clone https://github.com/ameenmaali/urldedupe.git
    	cd urldedupe
     	cmake CMakeLists.txt
-     	make 	
+     	make
+      	
+	wget https://raw.githubusercontent.com/Nishantbhagat57/OK-VPS/main/jaeles1.json -O $HOME/.axiom/modules/jaeles1.json
+
 }
 
 ENVIRONMENT && DNS_RESOLVER;
