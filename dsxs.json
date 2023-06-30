@@ -1,4 +1,4 @@
 [{
-	"command":"python3 /home/op/recon/DSXS/dsxs.py -u input | tee output",
+	"command":"python3 /home/op/recon/DSXS/dsxs.py -u \"input\" | tee output",
 	"ext":"txt"
 }]
