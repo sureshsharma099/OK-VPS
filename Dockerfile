@@ -1,5 +1,6 @@
 FROM golang:1.14-buster as builder
 RUN GO111MODULE=on GOOS=linux go get -ldflags "-linkmode external -extldflags -static" github.com/jaeles-project/jaeles
+RUN GO111MODULE=on GOOS=linux go get -ldflags "-linkmode external -extldflags -static" github.com/mafredri/cdp
 FROM alpine:latest
 RUN apk update && apk upgrade && apk add --no-cache bash git && apk add --no-cache chromium
 
@@ -13,8 +14,6 @@ RUN echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repos
     ttf-freefont@edge \
     && rm -rf /var/cache/* \
     && mkdir /var/cache/apk
-
-RUN go get github.com/mafredri/cdp
 
 WORKDIR /
 COPY --from=builder /go/bin/jaeles /bin/jaeles
