@@ -246,7 +246,8 @@ DNS_RESOLVER () {
 	brew install gcc
  	brew install git
 	brew install cmake
- 
+ 	brew install proxychains
+  
    	cd $HOME/BB
   	git clone https://github.com/ameenmaali/urldedupe.git
    	cd urldedupe
