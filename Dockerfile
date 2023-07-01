@@ -1,7 +1,21 @@
 FROM golang:1.14-buster as builder
 RUN GO111MODULE=on GOOS=linux go get -ldflags "-linkmode external -extldflags -static" github.com/jaeles-project/jaeles
 FROM alpine:latest
-RUN apk add chromium
+RUN apk update && apk upgrade && apk add --no-cache bash git && apk add --no-cache chromium
+
+# Installs latest Chromium package.
+RUN echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories \
+    && echo @edge http://nl.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories \
+    && apk add --no-cache \
+    harfbuzz@edge \
+    nss@edge \
+    freetype@edge \
+    ttf-freefont@edge \
+    && rm -rf /var/cache/* \
+    && mkdir /var/cache/apk
+
+RUN go get github.com/mafredri/cdp
+
 WORKDIR /
 COPY --from=builder /go/bin/jaeles /bin/jaeles
 EXPOSE 5000
