@@ -211,8 +211,9 @@ DNS_RESOLVER () {
 	sudo wget https://raw.githubusercontent.com/Azathothas/BugGPT-Tools/main/linky/linky.sh -O /usr/local/bin/linky && sudo chmod +xwr /usr/local/bin/linky && linky --help
 	
 	cd $HOME
-	sudo pip3 install gdown
-	sudo pip3 install wafw00f
+	pip3 install gdown
+	pip3 install wafw00f
+ 	pip3 install uro
 	
 	cd $HOME/BB
 	git clone https://github.com/Nishantbhagat57/OPleaks.git
