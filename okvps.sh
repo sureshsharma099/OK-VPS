@@ -254,6 +254,11 @@ DNS_RESOLVER () {
    	cd urldedupe
     	cmake CMakeLists.txt
      	make
+
+	cd $HOME/BB
+	git clone https://github.com/xnl-h4ck3r/urless.git
+ 	cd urless
+  	sudo python3 setup.py install
       	
 	wget https://raw.githubusercontent.com/Nishantbhagat57/OK-VPS/main/jaeles1.json -O $HOME/.axiom/modules/jaeles1.json
 
