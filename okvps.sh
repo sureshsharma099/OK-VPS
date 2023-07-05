@@ -142,6 +142,9 @@ DNS_RESOLVER () {
 
  	go install github.com/tomnomnom/gf@latest
  	sudo cp $HOME/go/bin/gf /usr/local/bin
+
+  	go install github.com/tomnomnom/qsreplace@latest
+   	sudo cp $HOME/go/bin/qsreplace /usr/local/bin
   
  	cd $HOME/BB
  	git clone https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner.git
@@ -268,7 +271,6 @@ DNS_RESOLVER () {
     	git clone https://github.com/1ndianl33t/Gf-Patterns
      	mkdir ~/.gf
       	mv Gf-Patterns/*.json ~/.gf
-   
       	
 	wget https://raw.githubusercontent.com/Nishantbhagat57/OK-VPS/main/jaeles1.json -O $HOME/.axiom/modules/jaeles1.json
 
