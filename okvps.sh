@@ -248,6 +248,7 @@ DNS_RESOLVER () {
  	brew install git
 	brew install cmake
  	brew install proxychains-ng
+  	brew install node
   
    	cd $HOME/BB
   	git clone https://github.com/ameenmaali/urldedupe.git
