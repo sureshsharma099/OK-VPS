@@ -139,7 +139,10 @@ DNS_RESOLVER () {
 
  	go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest
 	sudo cp $HOME/go/bin/Web-Cache-Vulnerability-Scanner /usr/local/bin
- 
+
+ 	go install github.com/tomnomnom/gf@latest
+ 	sudo cp $HOME/go/bin/gf /usr/local/bin
+  
  	cd $HOME/BB
  	git clone https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner.git
   
@@ -260,6 +263,7 @@ DNS_RESOLVER () {
 	git clone https://github.com/xnl-h4ck3r/urless.git
  	cd urless
   	sudo python3 setup.py install
+   
       	
 	wget https://raw.githubusercontent.com/Nishantbhagat57/OK-VPS/main/jaeles1.json -O $HOME/.axiom/modules/jaeles1.json
 
